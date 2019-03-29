@@ -7,15 +7,15 @@ int k=0;
     char s[100];
     struct stack *suiv;
 }stock;
- 
+
 void push(struct stack **elem,char s[100]);
 void pop(struct stack **elem);
 void main()
 {
     char exp[100];
     printf("\nEntrez une expression: ");
-   scanf("%s",exp); 
-   struct stack*suiv= NULL; 
+   scanf("%s",exp);
+   struct stack*suiv= NULL;
     int i=0;
     while(exp[i]!=EOF)
     {
@@ -68,14 +68,14 @@ void push( struct stack **elem,char s[100])
 struct stack *nouv_ele;
  nouv_ele =(char*)calloc(i, sizeof *nouv_ele);
     if (nouv_ele =! NULL){
-	
+
 	nouv_ele->s ;
 	nouv_ele->suiv = *elem;
 	*elem = nouv_ele;
 }
-	
+
 }
-   
+
 void pop(struct stack **elem)
 { int i=-1;
 if (elem != NULL)
@@ -84,8 +84,8 @@ if (elem != NULL)
         	  i = (*elem)->s ;
         	free(*elem),*elem=NULL;
         	*elem = ch;
-	
+
         }
-        
- 
+
+
 }
